@@ -1,5 +1,7 @@
 import React, { SyntheticEvent, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 import './sidebar.module.css';
 
 /* eslint-disable-next-line */
@@ -10,7 +12,7 @@ export function Sidebar(props: SidebarProps) {
 
   return (
     <>
-      <div className='h-screen w-full'>
+      <div className='h-full w-full'>
         <div className="bg-zinc-50 flex flex-col w-60 h-3/4 mt-2 ml-2 mb-5 pr-6 pl-6">
           <div className='flex justify-end mt-10 mb-5'>
             <div className='w-11 h-11 rounded-lg font-thin bg-red-500 flex text-white items-center justify-center'>
@@ -27,10 +29,8 @@ export function Sidebar(props: SidebarProps) {
           </div>
           <div className='mt-5 mb-6 flex flex-col'>
             <div className='flex items-center'>
-              <span className='font-bold mr-1.5'>Event type</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-7 text-white" fill="blue" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <span className='font-bold mr-2.5'>Event type</span>
+                <FontAwesomeIcon icon={faInfoCircle} color="blue"/>
             </div>
             <select className='bg-zinc-50 mt-2.5 text-zinc-400'>
               <option >Share slots</option>
